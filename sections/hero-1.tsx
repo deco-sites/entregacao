@@ -1,36 +1,34 @@
+import { ImageWidget } from "https://cdn.jsdelivr.net/gh/deco-cx/apps%400.40.1/admin/widgets";
+
 interface Props {
-  /**
-   * @description The description of name.
-   */
-  name?: string;
   /**
    * @description The color you want.
    */
   color?: string;
-    /**
-   * @intensity Of the color you want, like: bg-neutral-900.
-   */
+  /**
+ * @intensity Of the color you want, like: bg-neutral-900.
+ */
   intensity?: string;
+  title?: string;
+  image?: {
+    src?: ImageWidget;
+    alt?: string;
+  };
 }
 
-export default function Section({ name = "Capy", color = "neutral" }: Props) {
+export default function Section(
+  { 
+  title = "Titulo Component", 
+  color = "neutral", 
+  intensity = "100", 
+  image = {
+    src: "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
+    alt: "Logo"
+  }
+}: Props) {
   return (
-    <div class={`bg-${color}-900 p-8 rounded-md shadow-md`}>
-      <h2 class="text-2xl font-semibold mb-4">Fancy Component</h2>
-
-      <div class="space-y-4">
-        <button class={`btn btn-${color}`}>Click me</button>
-
-        <input
-          type="text"
-          class="input input-bordered"
-          placeholder="Type something"
-        />
-
-        <div class={`alert alert-${color}`}>
-          {name}
-        </div>
-      </div>
+    <div class={`bg-${color}-900 p-8 mx-2 rounded-md shadow-md`}>
+    {title} teste
     </div>
   );
 }
