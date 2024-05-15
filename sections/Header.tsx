@@ -14,6 +14,10 @@ export interface Nav {
     src?: ImageWidget;
     alt?: string;
   };
+  logo2?: {
+    src?: ImageWidget;
+    alt?: string;
+  };
   navigation?: {
     links: {
       label?: string;
@@ -25,6 +29,11 @@ export interface Nav {
 
 export default function Header({
   logo = {
+    src:
+      "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
+    alt: "Logo",
+  },
+  logo2 = {
     src:
       "https://ozksgdmyrqcxcwhnbepg.supabase.co/storage/v1/object/public/assets/1527/67120bcd-936a-4ea5-a760-02ed5c4a3d04",
     alt: "Logo",
@@ -49,7 +58,10 @@ export default function Header({
       {/* main content */}
       <div class="drawer-content container lg:px-0 px-4 flex gap-8 items-center justify-between py-4">
         <a href="/">
-          <Image src={logo.src || ""} width={100} height={28} alt={logo.alt} />
+          <Image src={logo.src || ""} width={40} height={35} alt={logo.alt} />
+        </a>
+        <a href="/">
+          <Image src={logo2.src || ""} width={100} height={35} alt={logo2.alt} />
         </a>
 
         <div class="hidden items-center justify-between lg:flex w-full">

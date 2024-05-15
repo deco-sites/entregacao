@@ -4,14 +4,18 @@ interface Props {
    */
   name?: string;
   /**
-   * @description The description of color.
+   * @description The color you want.
    */
   color?: string;
+    /**
+   * @intensity Of the color you want, like: bg-neutral-900.
+   */
+  intensity?: string;
 }
 
-export default function Section({ name = "Capy", color = "green" }: Props) {
+export default function Section({ name = "Capy", color = "neutral" }: Props) {
   return (
-    <div class={`bg-${color}-200 p-8 rounded-md shadow-md`}>
+    <div class={`bg-${color}-900 p-8 rounded-md shadow-md`}>
       <h2 class="text-2xl font-semibold mb-4">Fancy Component</h2>
 
       <div class="space-y-4">
