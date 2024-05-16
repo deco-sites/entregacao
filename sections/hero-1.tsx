@@ -1,4 +1,4 @@
-import { ImageWidget } from "apps/admin/widgets";
+import { ImageWidget } from "apps/admin/widgets.ts";
 
 interface Props {
   /**
