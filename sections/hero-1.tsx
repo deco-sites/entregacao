@@ -1,4 +1,4 @@
-import { ImageWidget } from "https://cdn.jsdelivr.net/gh/deco-cx/apps%400.40.1/admin/widgets";
+import { ImageWidget } from "apps/admin/widgets";
 
 interface Props {
   /**
